@@ -73,7 +73,7 @@ Our work is
 
 Using simulation, machine learning and geographic modelling techniques to improve clinical pathways
 
-SAMueL project: using ML to predict which stroke patients should receive clot-busting treatment
+The **SAMueL project** is using ML to predict which stroke patients should receive clot-busting treatment
 
 :::
 
@@ -88,7 +88,7 @@ SAMueL project: using ML to predict which stroke patients should receive clot-bu
 
 Supporting modellers and data scientists to make their work more open and reproducible
 
-STARS Project: Developing guidelines for how to share models to allow them to be used and reused effectively
+The **STARS project** is developing guidelines for how to share models to allow them to be used and reused effectively
 
 :::
 
@@ -598,7 +598,7 @@ They go to a <span style="color:red;">*triage cubicle*</span> and are <span styl
 
 ::::{.columns}
 
-:::{.column width=45%}
+:::{.column width=45% .fragment}
 
 ### 1. Trauma
 
@@ -607,7 +607,7 @@ They go to a <span style="color:red;">*triage cubicle*</span> and are <span styl
 
 :::
 
-:::{.column width=45%}
+:::{.column width=45% .fragment}
 
 ### 2. Non-Trauma
 
@@ -619,7 +619,11 @@ They go to a <span style="color:red;">*triage cubicle*</span> and are <span styl
 
 ::::
 
+::: {.fragment}
+
 Patients then leave the emergency department.
+
+:::
 
 ## Our Goal: Diagram
 
@@ -755,14 +759,29 @@ Computers aren’t very good at being random!
 
 So we give it a ‘seed’ to start from.
 
+```{=html}
+<br/><br/>
+```
+
 If our seed is 1, maybe the arrival times sampled from the distribution will be
 
 **5 minutes, 2 minutes, 3 minutes, 6 minutes, 5 minutes**
+
+```{=html}
+<br/><br/>
+```
 
 If our seed is 101, maybe the arrival times will be
 
 **10 minutes, 2 minutes, 5 minutes, 5 minutes, 3 minutes**
 
+## The DES Playground
+
+Let's head to the playground!
+
+[![](assets/2024-11-25-17-53-25.png)](https://bergam0t.github.io/rke_des_playground/)
+
+<bit.ly/rke-des>
 
 ## Arrivals Exercise {style="font-size: 70%;"}
 
@@ -855,7 +874,7 @@ We can start measuring some more results from our system now:
 (the % of the time that it is in use)
 
 ```{=html}
-<br/><br/>
+<br/>
 ```
 
 **The average waits for a resource**
@@ -863,7 +882,7 @@ We can start measuring some more results from our system now:
 (the number of minutes that pass waiting for someone to reach the front of the queue and be assigned to a resource)
 
 ```{=html}
-<br/><br/>
+<br/>
 ```
 
 **The % of patients who meet a target waiting time**
@@ -877,6 +896,9 @@ We can start measuring some more results from our system now:
 1. Try changing the sliders for consultation time and variation in consultation time.
     - What happens to the graph below the sliders?
 
+```{=html}
+<br/>
+```
 
 2. Put the consultation times back to the default (50 minutes length on average, 10 minutes of variation).
 
@@ -885,6 +907,10 @@ We can start measuring some more results from our system now:
         - the number of nurses in use?
         - the size of the queue for treatment at different times?
 
+```{=html}
+<br/>
+```
+
 3. What happens when you play around with the number of nurses we have available?
 
     - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
@@ -892,45 +918,30 @@ We can start measuring some more results from our system now:
 
 ## Answers - Q1
 
-Try changing the sliders for consultation time and variation in consultation time.
-
-What happens to the graph by the sliders?
+Try changing the sliders for consultation time and variation in consultation time. What happens to the graph by the sliders?
 
 ![](assets/2024-11-25-15-05-05.png)
 
 ## Answers - Q2
 
-Put the consultation times back to the default (50 minutes length on average, 10 minutes of variation).
-
-- Run the model and take a look at the animated flow of patients through the system.
-- What do you notice about
-    - the number of nurses in use?
-    - the size of the queue for treatment at different times?
+Run the model and take a look at the animated flow of patients through the system. What do you notice about the number of nurses in use and the size of the queue for treatment at different times?
 
 ![](assets/chrome_2sMKk8ZpwQ.gif)
 
 ## Answers - Q3
 
-What happens when you play around with the number of nurses we have available?
-    - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
-    - Can you find a middle ground where the nurse is being used a good amount without the queues building up?
+What happens when you play around with the number of nurses we have available? Can you find a middle ground where the nurse is being used a good amount without the queues building up?
 
 ![](assets/2024-11-25-15-06-28.png)
 
 
 ## Answers - Q3
 
-What happens when you play around with the number of nurses we have available?
-    - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
-    - Can you find a middle ground where the nurse is being used a good amount without the queues building up?
+What happens when you play around with the number of nurses we have available? Can you find a middle ground where the nurse is being used a good amount without the queues building up?
 
 ![](assets/2024-11-25-15-07-05.png)
 
 ## Answers - Q3
-
-What happens when you play around with the number of nurses we have available?
-    - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
-    - Can you find a middle ground where the nurse is being used a good amount without the queues building up?
 
 *How does this vary across runs?*
 
@@ -940,15 +951,13 @@ What happens when you play around with the number of nurses we have available?
 
 ## Adding Complexity
 
-Now, most systems are a bit more complex.
+Now, most systems are a bit more complex. Our entities (🤒🤧🤕🤢) might not all follow the same path.
 
-Our entities (🤒🤧🤕🤢) might not all follow the same path.
-
-For example, some might be ill enough to need treatment by a more specialised nurse:
+Some might be ill enough to need treatment by a more specialised nurse:
 
 ![](assets/2024-11-25-15-07-53.png)
 
-But others can just have some advice and be sent on their way by the first nurse, like before:
+Others can just have some advice and be sent on their way by the first nurse, like before:
 
 ![](assets/2024-11-25-15-08-09.png)
 
@@ -968,7 +977,15 @@ If we have a 50% probability of a client needing treatment (🏥), it’s like f
 
 The other 50% will go home (🏠)
 
+```{=html}
+<br/>
+```
+
 🏥 🏥 🏠 🏥 🏠 🏠 🏥 🏠 🏠 🏥
+
+```{=html}
+<br/>
+```
 
 If we make it a 70% probability, it’s like flipping a weighted coin...
 
@@ -978,19 +995,39 @@ If we make it a 70% probability, it’s like flipping a weighted coin...
 
 But like flipping a coin, our outcome won’t be exactly the same every time!
 
+:::{.fragment}
+
 🏥 🏥 🏠 🏠 🏠 🏠 🏥 🏠 🏠 🏠
+
+:::
+
+:::{.fragment}
 
 🏥 🏥 🏥 🏠 🏠 🏠 🏥 🏠 🏠 🏠
 
+:::
+
+:::{.fragment}
+
 🏥 🏥 🏠 🏠 🏠 🏠 🏥 🏠 🏠 🏥
+
+:::
+
+```{=html}
+<br/>
+```
+
+:::{.fragment}
 
 Or in rare cases, maybe even
 
 🏠 🏠 🏠 🏠 🏠 🏠 🏠 🏠 🏠 🏥
 
-## Effect on Simulation
+:::
 
-So what does this mean for our simulation?
+##  {#effect-sim data-menu-title="Effect on Simulation"}
+
+What does this mean for our simulation?
 
 :::{.fragment}
 
@@ -1000,7 +1037,7 @@ So what does this mean for our simulation?
 
 ## Variation in Variation
 
-It’s worth noting that while it can vary quite a lot on a single day, over a longer model run, it will average out to be closer to the value we specified - though still not exact.
+While it can vary quite a lot on a single day, over a longer model run, it will average out to be closer to the value we specified - though still not exact.
 
 ![](assets/2024-11-25-15-09-56.png)
 
@@ -1024,14 +1061,14 @@ The most flexible and powerful way to build your simulations is using code.
 
 ::::{.columns}
 
-:::{.column width=60%}
+:::{.column width=40%}
 
-![](resources/simmer-hex-01.svg){height=500px fig-alt="The logo for the simmer R package. It is a yellow hexagon with a darker yellow border, with the word 'simmer' at the bottom and a simple black mug containing a spoon and three white dots."}
+![](resources/simmer-hex-01.svg){height=200px fig-alt="The logo for the simmer R package. It is a yellow hexagon with a darker yellow border, with the word 'simmer' at the bottom and a simple black mug containing a spoon and three white dots."}
 
 :::
 
 
-:::{.column width=40%}
+:::{.column width=60%}
 
 <br/><br/>
 
@@ -1040,8 +1077,6 @@ R has the [simmer](https://r-simmer.org/) package.
 :::
 
 ::::
-
-In Python, there are a range of packages for DES.
 
 ::::{.columns}
 
@@ -1052,6 +1087,8 @@ In Python, there are a range of packages for DES.
 :::
 
 :::{.column width=60%}
+
+In Python, there are a range of packages for DES.
 
 HSMA has used and taught [simpy](https://simpy.readthedocs.io/en/latest/) for several years. It's mature, stable, reliable and flexible.
 
@@ -1066,7 +1103,6 @@ The DES lectures and activities from this year's HSMA can be found on our websit
 
 [{{< fa globe >}} Module Link](https://hsma-programme.github.io/hsma_site/hsma_content/modules/current_module_details/2_des.html)
 
-
 :::: {.columns}
 
 ::: {.column width="30%"}
@@ -1075,9 +1111,9 @@ The DES lectures and activities from this year's HSMA can be found on our websit
 
 • What DES is and where it may be useful
 
-• The key terminology associated with DES e.g. resources, entities, sinks
+• The key terminology associated with DES
 
-• How to simplify a real-world pathway modelling problem into a conceptual model
+• Simplifying a real-world pathway modelling problem into a conceptual model
 
 :::
 
@@ -1091,9 +1127,9 @@ The DES lectures and activities from this year's HSMA can be found on our websit
 
 ### SimPy for DES
 
-• The features of the SimPy package
+• Features of the SimPy package
 
-• How to write simple simulations with SimPy
+• Writing simple simulations with SimPy
 
 • Multi-step pathways
 
@@ -1158,23 +1194,29 @@ Frameworks like [Streamlit](https://streamlit.io/) can help you to quickly creat
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 
-![](resources/streamlit_cover_image.jpeg){fig-alt="A book cover, showing a robot surfing on a wave made of numbers"}
+![](resources/streamlit_cover_image.jpeg){fig-alt="A book cover, showing a robot surfing on a wave made of numbers" height=400px}
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
 
-This free HSMA eBook walks you through a range of Streamlit concepts.
+Our free HSMA eBook on web app development walks you through a range of Streamlit concepts.
 <br/><br/>
-It then goes on to providing a walk-through of how to create a simple front-end for any DES.
+It then goes on to providing a walk-through of how to create a simple front-end for any DES model.
+
+[{{< fa globe>}} &nbsp; Click here to view the eBook](https://bergam0t.github.io/streamlit_book/)
+
+We also have recorded training on Streamlit.
+
+[{{< fa globe >}} Module Link](https://hsma-programme.github.io/hsma_site/hsma_content/modules/current_module_details/7_git_and_web_development.html)
 
 :::
 
 ::::
 
-[{{< fa globe>}} &nbsp; Click here to view the eBook](https://bergam0t.github.io/streamlit_book/)
+
 
 ## Simulation Library
 
@@ -1231,3 +1273,6 @@ We'll use the default probabilities for trauma/non-trauma patients (0.3) and tre
 - You can create these yourself, or reach out to HSMAs within your organisation or other organisations to create them for you
 <br/><br/>
 - Code gives maximum flexibility, allowing us to automate problems like our final one so that the computer would find the best solution
+
+
+Access the full version of the DES playground [{{< fa globe >}} at bit.ly/des-playground](https://hsma-programme.github.io/Teaching_DES_Concepts_Streamlit/)
