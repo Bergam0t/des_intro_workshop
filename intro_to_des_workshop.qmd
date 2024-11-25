@@ -65,6 +65,10 @@ Our work is
 
 ## PenCHORD Themes
 
+```{=html}
+<br/>
+```
+
 ::::{.columns}
 
 :::{.column width=45%}
@@ -132,7 +136,7 @@ Follow us on GitHub [{{< fa brands github >}} github.com/hsma-programme](https:/
 
 The full HSMA experience is a live, 15-month programme with two distinct phases.
 
-:::{.callout-note appearance="minimal"}
+:::{.callout-note appearance="minimal" .fragment}
 
 ### PHASE 1 - 6 month training phase
 
@@ -146,7 +150,7 @@ Participants are released from their usual role for one day a week, joining the 
 <br/>
 ```
 
-:::{.callout-note appearance="minimal"}
+:::{.callout-note appearance="minimal" .fragment}
 
 ### PHASE 2 - 9 month project phase
 Participants are supported to produce a project using the new skills they have learned, applying operational research and data science techniques to a real problem within their organisation.
@@ -157,11 +161,27 @@ Participants are expected to spend **at least one day a week working on their pr
 
 ## HSMA Alumni and Projects
 
+::::{.columns}
+
+:::{.column width=40%}
+
 Our HSMA Community has now grown to **several hundred people** across 6 cohorts.
 
 You probably have HSMA alumni in your organisation who can do amazing things if asked the right questions!
 
-You can find out more about the HSMA Programme, the projects we have supported previously and our our current projects, [{{< fa globe >}} on the HSMA website](https://hsma-programme.github.io/hsma_site/)
+Find out more about the HSMA Programme and our projects [{{< fa globe >}} on the HSMA website](https://hsma-programme.github.io/hsma_site/)
+
+:::
+
+:::{.column width=60%}
+
+![HSMA 6 in the South West](assets/2024-11-25-18-25-40.png)
+
+:::
+
+::::
+
+
 
 
 ## Today's Workshop
@@ -590,7 +610,11 @@ We're going to work with a simple clinic model, gradually adding features.
 
 First, patients (our <span style="color:cyan;">**entities**)</span> arrive.
 
+:::{.fragment}
+
 They go to a <span style="color:red;">*triage cubicle*</span> and are <span style="color:yellow;">**triaged**</span> into one of two pathways.
+
+:::
 
 ```{=html}
 <br/>
@@ -777,11 +801,11 @@ If our seed is 101, maybe the arrival times will be
 
 ## The DES Playground
 
-Let's head to the playground!
+Let's head to the playground at <bit.ly/rke-des>
 
 [![](assets/2024-11-25-17-53-25.png)](https://bergam0t.github.io/rke_des_playground/)
 
-<bit.ly/rke-des>
+
 
 ## Arrivals Exercise {style="font-size: 70%;"}
 
@@ -811,12 +835,23 @@ Let's head to the playground!
 
 ## Answers - Q1
 
+::::{.columns}
+
+:::{.column width=25%}
+
 Try changing the slider with the title 'How many patients should arrive per day on average?'.
-Look at the graph below it.
 
 How does the shape of the distribution change? What does this mean for the time between arrivals?
 
+:::
+
+:::{.column width=75%}
+
 ![](assets/2024-11-25-14-58-24.png)
+
+:::
+
+::::
 
 ## Answers - Q2
 
@@ -866,7 +901,7 @@ Like the inter-arrival times, we don’t just use a set time for the consultatio
 We can start measuring some more results from our system now:
 
 ```{=html}
-<br/><br/>
+<br/>
 ```
 
 **The utilisation of our resource**
