@@ -71,6 +71,8 @@ Our work is
 
 ### HSMA
 
+Data Science and Operational Research capacity building
+
 :::
 
 :::{.column width=5%}
@@ -84,6 +86,9 @@ Our work is
 
 ### Optimising Clinical Pathways
 
+Using simulation, machine learning and geographic modelling techniques to improve clinical pathways
+
+SAMueL project: using ML to predict which stroke patients should receive clot-busting treatment
 
 :::
 
@@ -95,6 +100,10 @@ Our work is
 :::{.column width=30%}
 
 ### Open Modelling and Data Science
+
+Supporting modellers and data scientists to make their work more open and reproducible
+
+STARS Project: Developing guidelines for how to share models to allow them to be used and reused effectively
 
 :::
 
@@ -122,16 +131,74 @@ The Health Service Modelling Associates is a 15 month data science and operation
 </br></br>
 Supported by the NIHR PenARC and the NHS Digital Academy, the full programme is provided **free of charge** to people working in health, social care and policing and is accredited by AphA.
 </br></br>
-
-[{{< fa globe >}} hsma-programme.github.io/hsma_site/ - Visit Our Website for Free Training](https://hsma-programme.github.io/hsma_site/)
-
-[{{< fa brands youtube >}} youtube.com/@hsma - Subscribe to our YouTube Channel](https://www.youtube.com/@hsma)
-
-[{{< fa brands github >}} github.com/hsma-programme - Follow us on GitHub](https://github.com/hsma-programme)
 :::
+
+Visit Our Website [{{< fa globe >}} hsma-programme.github.io/hsma_site](https://hsma-programme.github.io/hsma_site)
+
+Subscribe to our YouTube Channel [{{< fa brands youtube >}} youtube.com/@hsma](https://www.youtube.com/@hsma)
+
+Follow us on GitHub [{{< fa brands github >}} github.com/hsma-programme](https://github.com/hsma-programme)
 
 
 ::::
+
+## HSMA Details
+
+The full HSMA experience is a live, 15-month programme with two distinct phases.
+
+:::{.callout-note appearance="minimal"}
+
+### PHASE 1 - 6 month training phase
+
+Participants learn the Python programming language, before progressing through simulation modelling, mapping, machine learning, natural language processing, website development, reproducible reporting, forecasting, and more.
+
+Participants are released from their usual role for one day a week, joining the HSMA trainers online for **live lectures and group work**.
+
+:::
+
+```{=html}
+<br/>
+```
+
+:::{.callout-note appearance="minimal"}
+
+### PHASE 2 - 9 month project phase
+Participants are supported to produce a project using the new skills they have learned, applying operational research and data science techniques to a real problem within their organisation.
+
+Participants are expected to spend **at least one day a week working on their project** during this phase.
+
+:::
+
+## HSMA Alumni and Projects
+
+Our HSMA Community has now grown to **several hundred people** across 6 cohorts.
+
+You probably have HSMA alumni in your organisation who can do amazing things if asked the right questions!
+
+You can find out more about the HSMA Programme, the projects we have supported previously and our our current projects, [{{< fa globe >}} on the HSMA website](https://hsma-programme.github.io/hsma_site/)
+
+
+## Today's Workshop
+
+In today’s workshop, we’re running an interactive taster session of HSMA training content drawn from the Discrete Event Simulation (DES) module of our training programme.
+
+Before we start, let's find out a little bit about you...
+
+```{=html}
+</br></br>
+```
+
+:::{.fragment .fade-in-then-out}
+Raise your hand if you've heard of discrete event simulation before
+:::
+
+:::{.fragment .fade-in-then-out}
+Raise your hand if you are in an analyst, data scientist or data engineer-type role
+:::
+
+:::{.fragment .fade-in-then-out}
+Raise your hand if you know some Python or R
+:::
 
 
 # Part 1: Pathways
@@ -309,7 +376,6 @@ A system that is coping now might *not* cope
 
 ## It's All a Simulation
 
-
 On HSMA, we teach a couple of different **computer simulation** techniques.
 
 :::: {.columns}
@@ -408,90 +474,9 @@ And so on!
 
 ## Variation
 
-That randomness and variation in our healthcare systems that we mentioned before? DES can cope really well with that!
+We'll explore this more in the interactive part of the workshop, but for now it's just worth mentioning that DES is also really good at dealing with **variation**.
 
-::::{.columns}
-
-:::{.column width=40%}
-
-Let's imagine that people turn up to our system, on average, every 10 minutes.
-
-However, sometimes no-one turns up for half an hour, and other times 3 people turn up simultaneously.
-
-By using **distributions** we can produce random times that mimic real-world patterns.
-
-:::
-
-:::{.column width=60%}
-
-![](assets/2024-11-19-17-04-14.png)
-
-:::
-
-::::
-
-## Randomness
-
-Taking it even further, we can harness that variation for making the most of our models.
-
-```{=html}
-<br/>
-```
-
-:::: {.columns  .fragment}
-
-::: {.column width="45%"}
-
-We can hold the random patterns consistent and **change resource levels or pathway design**
-
-:::
-
-::: {.column width="10%" }
-
-```{=html}
-<div style="border-left:3px solid #fff;height:250px"></div>
-```
-
-:::
-
-::: {.column width="45%" }
-
-We can hold resources or pathway design consistent and **allow randomness**
-
-:::
-
-::::
-
-
-```{=html}
-<br/>
-```
-
-
-
-:::: {.columns .fragment}
-
-::: {.column width="45%" }
-
-This allows us to be sure the changes we're testing really are responsible for the differences
-
-:::
-
-::: {.column width="10%" }
-
-```{=html}
-<div style="border-left:3px solid #fff;height:250px"></div>
-```
-
-:::
-
-::: {.column width="45%" }
-
-This allows us to test our system in multiple parallel universes, running it **tens** or even **hundreds** of times!
-
-:::
-
-::::
+Instead of just planning on **averages** - like the average length of stay, or the average number of people who are referred each month, we can take into account the real-world variation seen, and play out many different possible futures...
 
 
 ## A Note About Modelling
@@ -580,21 +565,7 @@ The model identified a need for additional rooms and the ED was redesigned as a 
 [{{< fa globe >}} Find Out More](https://hsma-programme.github.io/hsma_site/previous_projects/hsma_3/h3_generic_vaccination/)
 
 
-## Example 4: Mental Health Assessment Pathway Model
-
-This [PenCHORD](https://arc-swp.nihr.ac.uk/research-and-implementation/research-teams/penchord/) project created a simulation model of a mental health assessment pathway.
-
-The trust in question was piloting an approach that would allow patients to book their appointments themselves.
-
-The model was used to help
-
-- predict the number of appointment slots required at each site
-- show that allowing queue-sharing between smaller groups of sites would significantly reduce the wait times
-
-[{{< fa globe >}} Find Out More](https://arc-swp.nihr.ac.uk/publications/scheduling-community-mental-health-assessment-in-devon/)
-
-
-## Example 5: Children's Neurodiversity Assessment Pathway
+## Example 4: Children's Neurodiversity Assessment Pathway
 
 This [HSMA](https://hsma-programme.github.io/hsma_site/) project created a model of a paediatric neurodevelopmental (ADHD + autism) pathway. Waits had increased to a 2 years on average.
 
@@ -616,21 +587,97 @@ You can find details about all of our previous and current Discrete Event Simula
 
 # Activity
 
-## DES Applications
+## Opportunities for DES in your Organisations
 
 In your groups, we're going to spend a few minutes discussing opportunities you can see for DES in your organisation.
 
+- Do you have pathways you can see this being applied to?
+- Do you know of any simulation models that have already been done or are currently being worked on in your organisation?
 
+We'll then ask you to share some of this with the rest of the group.
+
+# Understanding Simulation Models
+
+For the rest of the session, we're going to play around with an interactive tool to help you build up your understanding of simulation models.
+
+We're going to work with a simple clinic model, gradually building it up.
+
+## Our Goal
+
+First, patients (our <span style="color:cyan;">**entities**)</span> arrive.
+
+They go to a <span style="color:red;">*triage cubicle*</span> and are <span style="color:yellow;">**triaged**</span> into one of two pathways.
+
+```{=html}
+<br/>
+```
+
+::::{.columns}
+
+:::{.column width=45%}
+
+### Trauma
+
+- Patients are <span style="color:yellow;">**stabilised**</span> in a <span style="color:red;">*trauma bay*</span>
+- *All* truma patients are <span style="color:yellow;">**treated**</span> in a <span style="color:red;">*trauma treatment cubicle*</span>
+
+:::
+
+:::{.column width=45%}
+
+### Non-Trauma
+
+- Patients are <span style="color:yellow;">**registered**</span> in a <span style="color:red;">*registration cubicle*</span>
+- Patients are <span style="color:yellow;">**examined**</span> in an <span style="color:red;">*examination room*</span>
+- *Some* non-trauma patients are <span style="color:yellow;">**treated**</span> in a <span style="color:red;">*treatment cubicle*</span>
+
+:::
+
+::::
+
+Patients then leave the emergency department.
+
+## Our Goal: Diagram
+
+We can think of our pathway like this.
+
+![](assets/2024-11-25-14-51-19.png)
 
 # DES Step 1: Arrivals
 
-## Recap - Controlled Randomness
+## Where are all the people?
 
-As mentioned earlier, one great thing about DES is controlled randomness.
+Our simulation first needs some people in it!
 
-We can work out the average time between patients arriving at the centre - maybe every 5 minutes - but we don't want people to just turn up at exact 5-minute intervals.
+We will tell our code to start generating people to place in the simulation - but how are we going to control the rate at which they arrive?
 
-That's not very realistic, and it doesn't help us understand how the system copes with variation.
+## Variation
+
+That randomness and variation in our healthcare systems that we mentioned before? DES can cope really well with that!
+
+::::{.columns}
+
+:::{.column width=40%}
+
+Let's imagine that people turn up to our system, on average, every 10 minutes.
+
+However, sometimes no-one turns up for half an hour, and other times 3 people turn up simultaneously.
+
+
+:::
+
+:::{.column width=60%}
+
+
+![](assets/2024-11-25-13-04-09.png)
+
+
+:::
+
+::::
+
+By using **distributions** we can produce random times that mimic real-world patterns.
+
 
 ## Distributions
 
@@ -638,18 +685,338 @@ We sample the gap between arrivals from a distribution.
 
 Where the bar higher, there is a greater chance that the random number picked will be somewhere around that value.
 
-![](assets/2024-11-25-13-04-09.png)
+::::{.columns}
 
-Depending on the real-world pattern we are trying to mimic, our distribution will be a different shape or peak in a different place.
+:::{.column width=60%}
+
+![](assets/2024-11-19-17-04-14.png)
+
+:::
+
+:::{.column width=40%}
+Depending on the real-world pattern we are trying to mimic, our distribution will
+
+- be a different shape
+- peak in a different place
+:::
+
+::::
+
+## Randomness
+
+Taking it even further, we can harness that variation for making the most of our models.
+
+```{=html}
+<br/>
+```
+
+:::: {.columns  .fragment}
+
+::: {.column width="45%"}
+
+We can hold the random arrival patterns consistent and **change resource levels or pathway design**
+
+:::
+
+::: {.column width="10%" }
+
+```{=html}
+<div style="border-left:3px solid #fff;height:250px"></div>
+```
+
+:::
+
+::: {.column width="45%" }
+
+We can hold resources or pathway design consistent and **allow randomness in arrival times**
+
+:::
+
+::::
+
+
+```{=html}
+<br/>
+```
+
+
+
+:::: {.columns .fragment}
+
+::: {.column width="45%" }
+
+This allows us to be sure the changes we're testing really are responsible for the differences
+
+:::
+
+::: {.column width="10%" }
+
+```{=html}
+<div style="border-left:3px solid #fff;height:250px"></div>
+```
+
+:::
+
+::: {.column width="45%" }
+
+This allows us to test our system in multiple parallel universes, running it **tens** or even **hundreds** of times!
+
+:::
+
+::::
+
+## Random Seeds
+
+Computers aren’t very good at being random!
+
+So we give it a ‘seed’ to start from.
+
+---
+
+If our seed is 1, maybe the arrival times sampled from the distribution will be
+
+**5 minutes, 2 minutes, 3 minutes, 6 minutes, 5 minutes**
+
+
+---
+
+If our seed is 101, maybe the arrival times will be
+
+**10 minutes, 2 minutes, 5 minutes, 5 minutes, 3 minutes**
+
+
+## Exercise
+
+1. Try changing the slider with the title 'How many patients should arrive per day on average?'.
+
+    - Look at the graph below it.
+    - How do the numbers on the horizontal axis change?
+
+
+2. Change the average number of patients back to the default (80) and click on 'Run simulation'.
+
+    - Look at the charts that show the variation in patient arrivals per simulation run.
+    - Look at the scatter (dot) plots at the bottom of the page to understand how the arrival times of patients varies across different simulation runs and different days.
+    - Hover over the dots to see more detail about the arrival time of each patient. By 6am, roughly how many patients have arrived in each simulation run?
+    - Think about how this randomness in arrival times across different runs could be useful.
+
+
+3. Try changing the random number the computer uses without changing anything else, then run the simulation.
+    - What happens to the number of patients?
+    - Do the bar charts and histograms look different?
+
+
+## Answers - Q1
+
+Try changing the slider with the title 'How many patients should arrive per day on average?'.
+Look at the graph below it.
+
+How do the numbers on the horizontal axis change?
+
+![](assets/2024-11-25-14-58-24.png)
+
+## Answers - Q2
+
+Change the average number of patients back to the default (80) and click on 'Run simulation'.
+
+Look at the charts that show the variation in patient arrivals per simulation run.
+
+![](assets/2024-11-25-14-58-52.png)
+
+## Answers - Q2
+
+Change the average number of patients back to the default (80) and click on 'Run simulation'.
+
+Look at the charts that show the variation in patient arrivals per simulation run.
+
+![](assets/2024-11-25-14-59-23.png)
+
+## Answers - Q2
+
+Look at the scatter (dot) plots at the bottom of the page to understand how the arrival times of patients varies across different simulation runs and different days.
+
+![](assets/2024-11-25-15-00-15.png)
+
+## Answers - Q2
+
+Look at the scatter (dot) plots at the bottom of the page to understand how the arrival times of patients varies across different simulation runs and different days.
+
+![](assets/2024-11-25-15-00-32.png)
+
+## Answers - Q2
+
+By 6am, roughly how many patients have arrived in different simulation runs?
+
+![](assets/2024-11-25-15-01-04.png)
+
+## Answers - Q3
+
+Try changing the random number the computer uses without changing anything else.
+
+What happens to the number of patients?
+
+Do the bar charts and histograms look different?
+
+![](assets/2024-11-25-15-01-36.png)
 
 # DES Step 2: A Simple Pathway
 
+## Using a Simple Resource
+
+Now we have arrivals, we don’t need much more to make our first full model!
+
+The next thing we need is a resource. 👩🏼‍⚕️
+
+Our entities (🤒🤧🤕🤢) will arrive and hog the resource (👩🏼‍⚕️) for a certain amount of time.
+
+![](assets/2024-11-25-15-02-28.png)
+
+Like the inter-arrival times, we don’t just use a set time for the consultation - we sample from a distribution.
+
+
+## Metrics Relating to Resources
+
+We can start measuring some more results from our system now:
+
+**The utilisation of our resource**
+(the % of the time that it is in use)
+
+**The average waits for a resource**
+(the number of minutes that pass waiting for someone to reach the front of the queue and be assigned to a resource)
+
+**The % of patients who meet a target waiting time**
+(how many patients wait less than the target time to get to the front of that queue)
+
+
+
+## Exercise
+
+1. Try changing the sliders for consultation time and variation in consultation time.
+    - What happens to the graph below the sliders?
+
+
+2. Put the consultation times back to the default (50 minutes length on average, 10 minutes of variation).
+    - Run the model and take a look at the animated flow of patients through the system.
+    - What do you notice about
+        - the number of nurses in use?
+        - the size of the queue for treatment at different times?
+
+3. What happens when you play around with the number of nurses we have available?
+    - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
+    - Can you find a middle ground where the nurse is being used a good amount without the queues building up?
+
+## Answers - Q1
+
+Try changing the sliders for consultation time and variation in consultation time.
+
+What happens to the graph by the sliders?
+
+![](assets/2024-11-25-15-05-05.png)
+
+## Answers - Q2
+
+Put the consultation times back to the default (50 minutes length on average, 10 minutes of variation).
+- Run the model and take a look at the animated flow of patients through the system.
+- What do you notice about
+    - the number of nurses in use?
+    - the size of the queue for treatment at different times?
+
+![]()
+
+## Answers - Q3
+
+What happens when you play around with the number of nurses we have available?
+    - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
+    - Can you find a middle ground where the nurse is being used a good amount without the queues building up?
+
+![](assets/2024-11-25-15-06-28.png)
+
+
+## Answers - Q3
+
+What happens when you play around with the number of nurses we have available?
+    - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
+    - Can you find a middle ground where the nurse is being used a good amount without the queues building up?
+
+![](assets/2024-11-25-15-07-05.png)
+
+## Answers - Q3
+
+What happens when you play around with the number of nurses we have available?
+    - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
+    - Can you find a middle ground where the nurse is being used a good amount without the queues building up?
+
+![](assets/2024-11-25-15-07-27.png)
 
 # DES Step 3: Branching Pathways
 
+## Adding Complexity
+
+Now, most systems are a bit more complex.
+
+Our entities (🤒🤧🤕🤢) might not all follow the same path.
+
+For example, some might be ill enough to need treatment by a more specialised nurse:
+
+![](assets/2024-11-25-15-07-53.png)
+
+But others can just have some advice and be sent on their way by the first nurse, like before:
+
+![](assets/2024-11-25-15-08-09.png)
+
+## The Revised System
+
+![](assets/2024-11-25-15-08-33.png)
+
+## Dealing with Branches
+
+Like every other step, we use a distribution!
+
+However, this time it’s a bit like flipping a coin.
+
+If we have a 50% probability of a client needing treatment (🏥), it’s like flipping a fair coin.
+
+The other 50% will go home (🏠)
+
+🏥 🏥 🏠 🏥 🏠 🏠 🏥 🏠 🏠 🏥
+
+If we make it a 70% probability, it’s like flipping a weighted coin...
+
+🏥 🏥 🏠 🏠 🏠 🏠 🏥 🏠 🏠 🏠
+
+## Variation in Branches
+
+But like flipping a coin, our outcome won’t be exactly the same every time!
+
+🏥 🏥 🏠 🏠 🏠 🏠 🏥 🏠 🏠 🏠
+
+🏥 🏥 🏥 🏠 🏠 🏠 🏥 🏠 🏠 🏠
+
+🏥 🏥 🏠 🏠 🏠 🏠 🏥 🏠 🏠 🏥
+
+Or in rare cases, maybe even
+
+🏠 🏠 🏠 🏠 🏠 🏠 🏠 🏠 🏠 🏥
+
+## Effect on Simulation
+
+So what does this mean for our simulation?
+
+![](assets/2024-11-25-15-09-29.png)
+
+## Variation in Variation
+
+It’s worth noting that while it can vary quite a lot on a single day, over a longer model run, it will average out to be closer to the value we specified - though still not exact.
+
+![](assets/2024-11-25-15-09-56.png)
 
 # DES Step 4: Optimising a Complex Pathway
 
+Now we know how every part of the full model works - so let’s put it all together.
+
+We’ve also added in a tweak here - arrivals now don’t occur at a consistent rate throughout the day.
+
+It’s quieter sometimes and busier at other times, like a real centre!
 
 
 # Doing your Own DES Projects
@@ -703,45 +1070,13 @@ In Python, there are a range of packages for DES.
 
 :::{.column width=40%}
 
-![](assets/2024-11-18-10-19-04.png){fig-alt="The logo for the Salabim simulation package. It is the text 'salabim' in a curly, stylised red font. In smaller text below this, it says 'discete event simulation'."}
-
-:::
-
-:::{.column width=60%}
-
-[Salabim](https://github.com/salabim/salabim) is quite popular.
-
-:::
-
-::::
-
-::::{.columns}
-
-:::{.column width=40%}
-
-![](assets/2024-11-18-10-16-14.png){fig-alt="The logo for the ciw package. It says 'Ciw' in simple white font on a yellow background, and below it has a white circle. To the left of the circle is a rectangle missing the leftmost edge, and several smaller complete rectangles within it at the rightmost end."}
-
-:::
-
-:::{.column width=60%}
-
-I've also heard good things about [ciw](https://github.com/CiwPython/Ciw)
-
-:::
-
-::::
-
-::::{.columns}
-
-:::{.column width=40%}
-
 ![](assets/2024-11-18-10-17-01.png){fig-alt="The logo for the simpy package. It is the text 'SimPy' in green and grey, with the top of the S stylised as the head of a snake and the bottom as a cog."}
 
 :::
 
 :::{.column width=60%}
 
-But HSMA has used and taught [simpy](https://simpy.readthedocs.io/en/latest/) for several years. It's mature, stable, reliable and flexible.
+HSMA has used and taught [simpy](https://simpy.readthedocs.io/en/latest/) for several years. It's mature, stable, reliable and flexible.
 
 :::
 
@@ -922,6 +1257,5 @@ More will be added in the coming months.
 
 - DES is an amazing option for tackling your pathway problems
 <br/><br/>
-- With ever-growing resources and community experience out there, it's a great time to get started
+- You can create these yourself, or reach out to HSMAs within your organisation or other organisations
 <br/><br/>
-- FOSS libraries allow us to adapt and reuse models - but follow guidance to make it as easy as possible for people to stand on your shoulders!
