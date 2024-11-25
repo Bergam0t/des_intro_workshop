@@ -1,5 +1,5 @@
 ---
-title: "Unleashing the Power of Pathway Simulation"
+title: "Queue, Queue, Barney McGrew: Unleashing the Power of Pathway Simulation"
 author:
     name: Sammi Rosser
     affiliation: Health Service Modelling Associates Programme
@@ -44,9 +44,9 @@ pio.renderers.default = "plotly_mimetype+notebook_connected"
 - Former NHS Analyst/Data Scientist
 :::
 
-[{{< fa brands linkedin >}} linkedin.com/in/sammijaderosser - Add Me On LinkedIn](https://www.linkedin.com/in/sammijaderosser/)
+[{{< fa brands linkedin >}} linkedin.com/in/sammijaderosser](https://www.linkedin.com/in/sammijaderosser/) Add Me On LinkedIn
 
-[{{< fa brands github >}} github.com/Bergam0t - Follow Me On GitHub](https://github.com/Bergam0t)
+[{{< fa brands github >}} github.com/Bergam0t](https://github.com/Bergam0t) Follow Me On GitHub
 
 ::::
 
@@ -67,22 +67,7 @@ Our work is
 
 ::::{.columns}
 
-:::{.column width=30%}
-
-### HSMA
-
-Data Science and Operational Research capacity building
-
-:::
-
-:::{.column width=5%}
-
-
-
-:::
-
-
-:::{.column width=30%}
+:::{.column width=45%}
 
 ### Optimising Clinical Pathways
 
@@ -92,12 +77,12 @@ SAMueL project: using ML to predict which stroke patients should receive clot-bu
 
 :::
 
-:::{.column width=5%}
+:::{.column width=10%}
 
 :::
 
 
-:::{.column width=30%}
+:::{.column width=45%}
 
 ### Open Modelling and Data Science
 
@@ -110,6 +95,7 @@ STARS Project: Developing guidelines for how to share models to allow them to be
 
 ::::
 
+And...
 
 ## {#about-hsma data-menu-title="About HSMA"}
 
@@ -201,7 +187,7 @@ Raise your hand if you know some Python or R
 :::
 
 
-# Part 1: Pathways
+# Pathways
 
 ## Pathway Simulation: Why?
 
@@ -585,9 +571,7 @@ You can find details about all of our previous and current Discrete Event Simula
 
 ![](assets/cfN8dkSYNB.gif){fig-alt="An animation of someone navigating through a page of projects on the HSMA website. They scroll down to a project on simulation and click on 'details' to receive more information and find a video on the project."}
 
-# Activity
-
-## Opportunities for DES in your Organisations
+## Discussion: Opportunities for DES in your Organisations
 
 In your groups, we're going to spend a few minutes discussing opportunities you can see for DES in your organisation.
 
@@ -600,7 +584,7 @@ We'll then ask you to share some of this with the rest of the group.
 
 For the rest of the session, we're going to play around with an interactive tool to help you build up your understanding of simulation models.
 
-We're going to work with a simple clinic model, gradually building it up.
+We're going to work with a simple clinic model, gradually adding features.
 
 ## Our Goal
 
@@ -616,7 +600,7 @@ They go to a <span style="color:red;">*triage cubicle*</span> and are <span styl
 
 :::{.column width=45%}
 
-### Trauma
+### 1. Trauma
 
 - Patients are <span style="color:yellow;">**stabilised**</span> in a <span style="color:red;">*trauma bay*</span>
 - *All* truma patients are <span style="color:yellow;">**treated**</span> in a <span style="color:red;">*trauma treatment cubicle*</span>
@@ -625,7 +609,7 @@ They go to a <span style="color:red;">*triage cubicle*</span> and are <span styl
 
 :::{.column width=45%}
 
-### Non-Trauma
+### 2. Non-Trauma
 
 - Patients are <span style="color:yellow;">**registered**</span> in a <span style="color:red;">*registration cubicle*</span>
 - Patients are <span style="color:yellow;">**examined**</span> in an <span style="color:red;">*examination room*</span>
@@ -771,37 +755,37 @@ Computers aren’t very good at being random!
 
 So we give it a ‘seed’ to start from.
 
----
-
 If our seed is 1, maybe the arrival times sampled from the distribution will be
 
 **5 minutes, 2 minutes, 3 minutes, 6 minutes, 5 minutes**
-
-
----
 
 If our seed is 101, maybe the arrival times will be
 
 **10 minutes, 2 minutes, 5 minutes, 5 minutes, 3 minutes**
 
 
-## Exercise
+## Arrivals Exercise {style="font-size: 70%;"}
 
 1. Try changing the slider with the title 'How many patients should arrive per day on average?'.
 
     - Look at the graph below it.
-    - How do the numbers on the horizontal axis change?
+        - How does the shape of the distribution change?
+        - What does this mean for the time between arrivals?
 
+```{=html}
+<br/><br/>
+```
 
 2. Change the average number of patients back to the default (80) and click on 'Run simulation'.
 
     - Look at the charts that show the variation in patient arrivals per simulation run.
-    - Look at the scatter (dot) plots at the bottom of the page to understand how the arrival times of patients varies across different simulation runs and different days.
-    - Hover over the dots to see more detail about the arrival time of each patient. By 6am, roughly how many patients have arrived in each simulation run?
-    - Think about how this randomness in arrival times across different runs could be useful.
+    - Look at the chart of cumulative arrivals. By 6am, what was the highest and lowest number of arrivals in different simulation runs?
 
+```{=html}
+<br/><br/>
+```
 
-3. Try changing the random number the computer uses without changing anything else, then run the simulation.
+3. Try changing the random number the computer uses without changing anything else, then run the simulation again.
     - What happens to the number of patients?
     - Do the bar charts and histograms look different?
 
@@ -811,7 +795,7 @@ If our seed is 101, maybe the arrival times will be
 Try changing the slider with the title 'How many patients should arrive per day on average?'.
 Look at the graph below it.
 
-How do the numbers on the horizontal axis change?
+How does the shape of the distribution change? What does this mean for the time between arrivals?
 
 ![](assets/2024-11-25-14-58-24.png)
 
@@ -833,29 +817,13 @@ Look at the charts that show the variation in patient arrivals per simulation ru
 
 ## Answers - Q2
 
-Look at the scatter (dot) plots at the bottom of the page to understand how the arrival times of patients varies across different simulation runs and different days.
-
-![](assets/2024-11-25-15-00-15.png)
-
-## Answers - Q2
-
-Look at the scatter (dot) plots at the bottom of the page to understand how the arrival times of patients varies across different simulation runs and different days.
-
-![](assets/2024-11-25-15-00-32.png)
-
-## Answers - Q2
-
 By 6am, roughly how many patients have arrived in different simulation runs?
 
 ![](assets/2024-11-25-15-01-04.png)
 
 ## Answers - Q3
 
-Try changing the random number the computer uses without changing anything else.
-
-What happens to the number of patients?
-
-Do the bar charts and histograms look different?
+Try changing the random number the computer uses without changing anything else. What happens to the number of patients? Do the bar charts and histograms look different?
 
 ![](assets/2024-11-25-15-01-36.png)
 
@@ -878,30 +846,47 @@ Like the inter-arrival times, we don’t just use a set time for the consultatio
 
 We can start measuring some more results from our system now:
 
+```{=html}
+<br/><br/>
+```
+
 **The utilisation of our resource**
+
 (the % of the time that it is in use)
 
+```{=html}
+<br/><br/>
+```
+
 **The average waits for a resource**
+
 (the number of minutes that pass waiting for someone to reach the front of the queue and be assigned to a resource)
 
+```{=html}
+<br/><br/>
+```
+
 **The % of patients who meet a target waiting time**
+
 (how many patients wait less than the target time to get to the front of that queue)
 
 
 
-## Exercise
+## Resource Exercise  {style="font-size: 70%;"}
 
 1. Try changing the sliders for consultation time and variation in consultation time.
     - What happens to the graph below the sliders?
 
 
 2. Put the consultation times back to the default (50 minutes length on average, 10 minutes of variation).
+
     - Run the model and take a look at the animated flow of patients through the system.
     - What do you notice about
         - the number of nurses in use?
         - the size of the queue for treatment at different times?
 
 3. What happens when you play around with the number of nurses we have available?
+
     - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
     - Can you find a middle ground where the nurse is being used a good amount without the queues building up?
 
@@ -916,12 +901,13 @@ What happens to the graph by the sliders?
 ## Answers - Q2
 
 Put the consultation times back to the default (50 minutes length on average, 10 minutes of variation).
+
 - Run the model and take a look at the animated flow of patients through the system.
 - What do you notice about
     - the number of nurses in use?
     - the size of the queue for treatment at different times?
 
-![]()
+![](assets/chrome_2sMKk8ZpwQ.gif)
 
 ## Answers - Q3
 
@@ -946,6 +932,8 @@ What happens when you play around with the number of nurses we have available?
     - Look at the queues, but look at the resource utilisation too. The resource utilisation tells us how much of the time each nurse is busy rather than waiting for a patient to turn up.
     - Can you find a middle ground where the nurse is being used a good amount without the queues building up?
 
+*How does this vary across runs?*
+
 ![](assets/2024-11-25-15-07-27.png)
 
 # DES Step 3: Branching Pathways
@@ -965,6 +953,8 @@ But others can just have some advice and be sent on their way by the first nurse
 ![](assets/2024-11-25-15-08-09.png)
 
 ## The Revised System
+
+Our revised system looks a bit more like this.
 
 ![](assets/2024-11-25-15-08-33.png)
 
@@ -1002,7 +992,11 @@ Or in rare cases, maybe even
 
 So what does this mean for our simulation?
 
+:::{.fragment}
+
 ![](assets/2024-11-25-15-09-29.png)
+
+:::
 
 ## Variation in Variation
 
@@ -1010,25 +1004,9 @@ It’s worth noting that while it can vary quite a lot on a single day, over a l
 
 ![](assets/2024-11-25-15-09-56.png)
 
-# DES Step 4: Optimising a Complex Pathway
-
-Now we know how every part of the full model works - so let’s put it all together.
-
-We’ve also added in a tweak here - arrivals now don’t occur at a consistent rate throughout the day.
-
-It’s quieter sometimes and busier at other times, like a real centre!
-
-
 # Doing your Own DES Projects
 
-## Conceptual Modelling
-
-DES models (and all data science and operational research projects!) work best when there's involvement from the start of staff involved with the pathway.
-
-One of the key early steps of any DES project is **mapping the pathway**.
-
-**TODO
-
+Before we go on to our final exercise, let's discuss how you could start modelling your own pathways.
 
 ## Drag & Drop
 
@@ -1040,8 +1018,9 @@ However, If you don't code, there is the free and open source (FOSS) tool [JaamS
 
 ![](assets/2024-11-18-10-15-22.png){fig-alt="A screenshot showing the homepage of the website for the JaamSim software. It contains a link to download the software for free, as well as a video showing the use of the software and some key information about the features of the software."}
 
+## DES in Code
 
-## DES in R
+The most flexible and powerful way to build your simulations is using code.
 
 ::::{.columns}
 
@@ -1061,8 +1040,6 @@ R has the [simmer](https://r-simmer.org/) package.
 :::
 
 ::::
-
-## DES in Python
 
 In Python, there are a range of packages for DES.
 
@@ -1110,7 +1087,7 @@ The DES lectures and activities from this year's HSMA can be found on our websit
 :::
 
 
-::: {.column width="30%" .fragment}
+::: {.column width="30%"}
 
 ### SimPy for DES
 
@@ -1128,7 +1105,7 @@ The DES lectures and activities from this year's HSMA can be found on our websit
 
 :::
 
-::: {.column width="30%" .fragment}
+::: {.column width="30%"}
 
 ### Advanced Simpy
 
@@ -1166,15 +1143,7 @@ The DES lectures and activities from this year's HSMA can be found on our websit
 
 We have also put together a **free eBook** that serves as a handy reference to doing DES with SimPy.
 
-It's packed with code snippets you can use and modify and goes beyond the lecture content, including
-
-• appointment-based models
-
-• reproducibility
-
-• parallelisation
-
-• and more!
+It's packed with code snippets you can use and modify, and it goes beyond the lecture content.
 
 :::
 
@@ -1183,31 +1152,9 @@ It's packed with code snippets you can use and modify and goes beyond the lectur
 
 ## HSMA Training on Web App Interfaces for DES {.smaller}
 
-::::{.columns}
-
-:::{.column width=23%}
-
 While creating these models and running a range of parameters yourself can be really powerful, getting the models into the hands of stakeholders can really enhance their adoption.
 <br/><br/>
 Frameworks like [Streamlit](https://streamlit.io/) can help you to quickly create interactive web app front-ends for your app.
-
-:::
-
-:::{.column width=3%}
-
-:::
-
-:::{.column width=74%}
-
-![](assets/chrome_CdAZUpS295.gif){fig-alt="An animation of a simulation model web interface, showing a user changing simulation parameters using sliders"}
-
-:::
-
-::::
-
-
-## The HSMA Book of Streamlit
-
 
 :::: {.columns}
 
@@ -1219,9 +1166,9 @@ Frameworks like [Streamlit](https://streamlit.io/) can help you to quickly creat
 
 ::: {.column width="50%"}
 
-This free eBook walks you through a range of Streamlit concepts.
+This free HSMA eBook walks you through a range of Streamlit concepts.
 <br/><br/>
-It then goes on to providing a walk-through of how to create a simple front-end for any DES and deploying that on a free online hosting platform.
+It then goes on to providing a walk-through of how to create a simple front-end for any DES.
 
 :::
 
@@ -1230,10 +1177,6 @@ It then goes on to providing a walk-through of how to create a simple front-end 
 [{{< fa globe>}} &nbsp; Click here to view the eBook](https://bergam0t.github.io/streamlit_book/)
 
 ## Simulation Library
-
-:::{.callout-warning appearance="minimal"}
-This is an early-stage piece of work!
-:::
 
 On HSMA, we're trying to collate and visualising models from across healthcare systems.
 
@@ -1250,6 +1193,34 @@ More will be added in the coming months.
 
 [{{< fa brands github>}} &nbsp; Click here for the code repository](https://github.com/hsma-programme/simpy_visualisation/tree/main/examples)
 
+```{=html}
+<br/>
+```
+
+:::{.callout-warning appearance="minimal"}
+This is an early-stage piece of work!
+:::
+
+# DES Step 4: Optimising a Complex Pathway
+
+Now we know how every part of the full model works - so let’s put it all together.
+
+We’ve also added in a tweak here - arrivals now don’t occur at a consistent rate throughout the day.
+
+It’s quieter sometimes and busier at other times, like a real centre!
+
+## The final problem
+
+Due to building work taking place, our hospital will temporarily need to close several bays.
+
+It will be possible to have a maximum of 20 bays/cubicles/rooms in total across the whole system.
+
+**What is the best configuration we can find to keep the average wait times as low as possible?**
+
+:::{.callout-note}
+We'll use the default probabilities for trauma/non-trauma patients (0.3) and treatment of non-trauma patients (0.7)
+:::
+
 
 # End of Simulation
 
@@ -1257,5 +1228,6 @@ More will be added in the coming months.
 
 - DES is an amazing option for tackling your pathway problems
 <br/><br/>
-- You can create these yourself, or reach out to HSMAs within your organisation or other organisations
+- You can create these yourself, or reach out to HSMAs within your organisation or other organisations to create them for you
 <br/><br/>
+- Code gives maximum flexibility, allowing us to automate problems like our final one so that the computer would find the best solution
