@@ -801,10 +801,13 @@ If our seed is 101, maybe the arrival times will be
 
 ## The DES Playground
 
-Let's head to the playground at (bit.ly/rke-des)[bit.ly/rke-des]
+Let's head to the playground at [bit.ly/rke-des](https://www.bit.ly/rke-des)
 
-[![](assets/2024-11-25-17-53-25.png)](https://bergam0t.github.io/rke_des_playground/)
+[![](assets/2024-11-25-17-53-25.png){height=450}](https://bergam0t.github.io/rke_des_playground/)
 
+:::{.callout-warning}
+Note that this site will not work on mobiles or on the Firefox browser
+:::
 
 
 ## Arrivals Exercise {style="font-size: 70%;"}
@@ -1311,3 +1314,7 @@ We'll use the default probabilities for trauma/non-trauma patients (0.3) and tre
 
 
 Access the full version of the DES playground [{{< fa globe >}} at bit.ly/des-playground](https://hsma-programme.github.io/Teaching_DES_Concepts_Streamlit/)
+
+:::{.callout-warning}
+Note that this site will not work on mobiles or on the Firefox browser
+:::
