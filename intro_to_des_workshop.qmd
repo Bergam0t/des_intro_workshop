@@ -801,7 +801,7 @@ If our seed is 101, maybe the arrival times will be
 
 ## The DES Playground
 
-Let's head to the playground at <bit.ly/rke-des>
+Let's head to the playground at (bit.ly/rke-des)[bit.ly/rke-des]
 
 [![](assets/2024-11-25-17-53-25.png)](https://bergam0t.github.io/rke_des_playground/)
 
