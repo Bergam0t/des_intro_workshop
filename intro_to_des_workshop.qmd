@@ -188,6 +188,8 @@ Find out more about the HSMA Programme and our projects [{{< fa globe >}} on the
 
 In today’s workshop, we’re running an interactive taster session of HSMA training content drawn from the Discrete Event Simulation (DES) module of our training programme.
 
+You can view the interactive version of these slides at [bit.ly/rke-des-slides](https://www.bit.ly/rke-des-slides)
+
 Before we start, let's find out a little bit about you...
 
 ```{=html}
